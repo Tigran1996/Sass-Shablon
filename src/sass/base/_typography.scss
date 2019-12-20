@@ -1,8 +1,31 @@
-body {
-  font-family: 'Segoe UI';
-  font-weight:100;
-  line-height: 1.4;
-  //color: ;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../fonts/RedHatDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.ttf') format('truetype');
+}
+//Language font styles
+body{
+  font-family: "Red Hat Display";
+}
+.hy{
+  font-family: 'Rubik';
+}
+.en{
+
+}
+.ru{
+
 }
 
+@include adaptiv-to(comp-screens ) {
+  @include font-comp;
+}
+@include adaptiv-to(tablet-screens) {
+  @include font-tablet;
+}
+@include adaptiv-to(phone-screens) {
+  @include font-phone;
+}

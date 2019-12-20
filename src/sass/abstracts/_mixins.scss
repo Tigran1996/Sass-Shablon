@@ -5,16 +5,72 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-
-
+//flex
 @mixin flex{
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
 }
-
-
+//fonts sizes
+@mixin font-comp{
+  body{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  h4{
+    font-size: 25px;
+  }
+  p,li,span,button{
+    font-size: 22px;
+  }
+}
+@mixin font-tablet{
+  body{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 45px;
+  }
+  h2{
+    font-size: 35px;
+  }
+  h3{
+    font-size: 25px;
+  }
+  h4{
+    font-size: 20px;
+  }
+  p,li,span,button{
+    font-size: 20px;
+  }
+}
+@mixin font-phone{
+  body{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  h4{
+    font-size: 15px;
+  }
+  p,li,span,button{
+    font-size: 18px;
+  }
+}
 //  TEXT OVERFLOW ELLIPSES
 
 @mixin ellipses($elheight, $row) {
@@ -26,9 +82,9 @@
   -webkit-line-clamp: $row;
 }
 
-$comp: 1024px;
-$tablet: 720px;
-$phone: 570px;
+$comp: 1200px;
+$tablet: 768px;
+$phone: 600px;//not used
 
 @mixin adaptiv-to($media) {
   @if $media == phone-screens {
