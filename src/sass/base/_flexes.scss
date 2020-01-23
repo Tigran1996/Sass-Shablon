@@ -1,0 +1,78 @@
+.two-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 45%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.three-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 30%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.four-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 20%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+
+
+@include adaptiv-to(comp-screens ) {
+}
+@include adaptiv-to(tablet-screens) {
+  .two-flex,.four-flex{
+    > div {
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+  .three-flex{
+    > div {
+      width: 100% !important;
+      margin-bottom: 40px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+}
+@include adaptiv-to(phone-screens) {
+
+  .two-flex,.four-flex{
+    > div {
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+  .three-flex{
+    > div {
+      width: 100% !important;
+      margin-bottom: 40px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+}

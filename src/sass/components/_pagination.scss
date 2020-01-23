@@ -1,0 +1,109 @@
+.pagination-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  .arrow-left{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 9px;
+      height: 18px;
+      transform: rotate(-180deg);
+
+    }
+  }
+  .arrow-right{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 9px;
+      height: 18px;
+      transform: rotate(0deg);
+
+    }
+  }
+
+  .pagination{
+    width: 70%;
+    margin: 0 10px;
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+      min-height: 24px;
+      max-width: 24px !important;
+      width: 15%;
+      white-space: nowrap;
+    }
+    button+button{
+      margin-left: 2%;
+    }
+    .btn-active{
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      font-size: 16px;
+      background: $main-color;
+      color: #fff !important;
+      border-radius: 5px;
+      padding: 1px 3px;
+      border: 1px solid $main-color;
+      display: flex;
+      align-items: center;
+      box-shadow: none !important;
+
+      justify-content: center;
+      text-align: center;
+
+      &:hover{
+        background: #009090;
+        color: #fff !important;
+        border: 1px solid #009090;
+      }
+    }
+    .dotes{
+      background: none;
+      border: 0;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 23px;
+      line-height: 22px;
+      color: $main-color !important;
+      padding: 1px 3px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .btn-noactive{
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      font-size: 16px;
+      background: rgba(0, 173, 173, 0.1);
+      color: $main-color !important;
+      border-radius: 5px;
+      padding: 1px 3px;
+      border: 1px solid rgba(0, 173, 173, 0.1);
+      box-shadow: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      &:hover{
+        background: #ECECEC;
+        color: $main-color !important;
+        border: 1px solid #ECECEC;
+      }
+    }
+  }
+}
